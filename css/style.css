@@ -1,0 +1,193 @@
+/* .pseudoElements::before,
+.pseudoElements::after {
+  content: "";
+  background: url("../images/quotes.png");
+  display: inline-block;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+
+.pdf {
+  position: relative;
+}
+
+.pdf::before {
+  content: "";
+  background-image: url("../images/pdf.png");
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 150px;
+  bottom: -20px;
+}
+.doc {
+  position: relative;
+}
+
+.doc::before {
+  content: "";
+  background-image: url("../images/doc.png");
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 150px;
+  bottom: -20px;
+}
+
+.xls {
+  position: relative;
+}
+
+.xls::before {
+  content: "";
+  background-image: url("../images/xls.png");
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 150px;
+  bottom: -20px;
+}
+
+.pdf ul{
+    list-style-type: disc;
+    color: blue;
+  } 
+  .doc ul{
+    list-style-type: disc;
+    color: blue;
+  } 
+  .xls ul{
+    list-style-type: disc;
+    color: blue;
+  } 
+
+  .sandwich {
+      position: relative;
+      border: 1px solid black;
+  }
+
+  .sandwich::before,
+  .sandwich::after {
+      content: "";
+      width: 100%;
+      height: 15px;
+      display: block;
+      position:absolute;
+  }
+
+  .sandwich::before
+  {
+    position: absolute;
+      top: 0;
+      background: linear-gradient(to right , red,green, orange, blue);
+  } 
+
+  .sandwich::after
+  {
+    position: absolute;
+      bottom: 0;
+      background: linear-gradient(to right , blue, pink, orange, purple);
+  } 
+
+
+  .stuff {
+      position: relative;
+      margin-top: 10px;
+      border: 1px solid black;
+  }
+
+.stuff::before,
+  .stuff::after {
+      content: "";
+      width: 100%;
+      height: 15px;
+      display: block;
+      position:absolute;
+  }
+
+  .stuff::before
+  {
+    position: absolute;
+      top: 0;
+      background: linear-gradient(to right , red,green, orange, blue);
+  } 
+
+  .stuff::after
+  {
+    position: absolute;
+      bottom: 0;
+      background: linear-gradient(to right , blue,pink, orange,purple);
+  }  */
+
+/* Second Methods */
+
+.quotes li::before,
+.quotes li::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/161359/quotes.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+ul.link-list li {
+  padding: 10px;
+}
+
+a[href$="pdf"]::after,
+a[href$="xls"]::after,
+a[href$="doc"]::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+a[href$="pdf"]::after {
+  background-image: url(https://img.icons8.com/officel/64/000000/pdf.png);
+}
+
+a[href$="xls"]::after {
+  background-image: url(https://img.icons8.com/dusk/64/000000/ms-excel.png);
+}
+
+a[href$="doc"]::after {
+  background-image: url(https://img.icons8.com/dusk/64/000000/ms-word.png);
+}
+
+.sandwich {
+  margin-bottom: 1rem;
+  border: 1px solid;
+}
+
+.sandwich::before,
+.sandwich::after {
+  content: "";
+  height: 10px;
+  display: block;
+}
+
+.sandwich::before {
+  background: linear-gradient(to left, yellow, lightskyblue);
+}
+
+.sandwich::after {
+  background: linear-gradient(to right, yellow, lightskyblue);
+}
